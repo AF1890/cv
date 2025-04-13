@@ -1,0 +1,291 @@
+:root {
+    --primary-color: #2d3436;
+    --secondary-color: #636e72;
+    --accent-color: #00b894;
+    --accent-color-light: #55efc4;
+    --background-color: #f5f6fa;
+    --card-background: #ffffff;
+    --border-color: #dfe6e9;
+    --section-bg: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 4rem 2rem;
+    position: relative;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+    color: var(--primary-color);
+}
+
+.header h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.section.contact, .section.description {
+    grid-column: 1 / -1;
+}
+
+.column-left, .column-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.section:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+    transform: translateY(-2px);
+}
+
+.section.experiences,
+.section.formations,
+.section.competences,
+.section.soft-skills {
+    background-color: var(--section-bg);
+    height: auto;
+}
+
+/* Ajustement pour l'alignement des sections de compétences */
+.section.competences,
+.section.soft-skills {
+    margin-top: auto;
+}
+
+.section h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.contact ul {
+    list-style: none;
+}
+
+.contact li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+}
+
+.contact li strong {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+    font-weight: 500;
+}
+
+.description p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--secondary-color);
+}
+
+.experiences ul, .formations ul {
+    list-style: none;
+}
+
+.experiences li, .formations li {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--secondary-color);
+}
+
+.experiences li::before, .formations li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.competences-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.competence-tag {
+    background-color: var(--accent-color-light);
+    color: var(--accent-color);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.competence-tag:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Styles pour les expériences */
+#experiences li {
+    white-space: pre-line;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+#experiences li:last-child {
+    margin-bottom: 0;
+}
+
+/* Styles pour les compétences */
+.competence-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    background-color: var(--accent-color-light);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Styles pour les erreurs */
+.error {
+    color: #e74c3c;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+/* Styles pour les détails des compétences */
+.skill-detail {
+    display: inline-block;
+    margin-left: 8px;
+    color: var(--secondary-color);
+    font-style: normal;
+    font-size: 0.85em;
+}
+
+/* Styles pour les jauges de compétences */
+.skill-gauge {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 5px;
+    color: #2ecc71;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+}
+
+.competences li {
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+/* Container pour les compétences */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.competences, .soft-skills {
+    width: 100%;
+}
+
+.competences ul, .soft-skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.competences li, .soft-skills li {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .header {
+        padding: 3rem 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .content {
+        grid-template-columns: 1fr;
+    }
+    
+    .section {
+        padding: 1.5rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+} 

@@ -1,0 +1,14 @@
+# Configuration personnelle
+config/personal.yaml
+
+# Binaires
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Fichiers temporaires
+*.tmp
+*.swp
+.DS_Store 

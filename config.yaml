@@ -1,0 +1,11 @@
+server:
+  port: 8080  # Port interne pour l'application
+  host: "localhost"  # Écoute sur localhost
+
+domain:
+  name: "localhost:8080"  # Domaine temporaire pour le développement
+  ssl: false  # Pas de SSL en local
+
+paths:
+  static: "web/static"
+  templates: "web/templates" 
