@@ -1,5 +1,6 @@
 # Configuration personnelle
 config/personal.yaml
+config.yaml
 
 # Binaires
 *.exe

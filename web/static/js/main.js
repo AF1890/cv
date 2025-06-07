@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Mise à jour des informations personnelles
             document.getElementById('nom').innerHTML = `${data.prenom} ${data.nom}`;
             document.getElementById('poste').innerHTML = data.poste;
-            document.getElementById('email').innerHTML = data.email;
-            document.getElementById('telephone').innerHTML = data.telephone;
             document.getElementById('description').innerHTML = data.description;
 
             // Mise à jour des expériences
