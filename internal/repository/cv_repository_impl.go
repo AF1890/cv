@@ -15,8 +15,6 @@ type PersonalConfig struct {
 	Personal struct {
 		Nom         string `yaml:"nom"`
 		Prenom      string `yaml:"prenom"`
-		Email       string `yaml:"email"`
-		Telephone   string `yaml:"telephone"`
 		Poste       string `yaml:"poste"`
 		Description string `yaml:"description"`
 	} `yaml:"personal"`
@@ -46,8 +44,6 @@ func (r *cvRepository) GetCV() (*domain.CV, error) {
 	return &domain.CV{
 		Nom:         config.Personal.Nom,
 		Prenom:      config.Personal.Prenom,
-		Email:       config.Personal.Email,
-		Telephone:   config.Personal.Telephone,
 		Poste:       config.Personal.Poste,
 		Description: config.Personal.Description,
 		Experiences: []string{
